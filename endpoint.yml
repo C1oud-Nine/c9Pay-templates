@@ -1,4 +1,4 @@
-# 인증 서비스 auth-service
+# 인증 서비스 auth-service localhost:8081
 /auth-service:
   /serial-number:
     [GET]: 식별번호 검증 { 개체식별번호 }
@@ -17,7 +17,7 @@
       실패: 400 { 에러코드 }
 
 
-# 크레딧 서비스 credit-service
+# 크레딧 서비스 credit-service  localhost:8082
 /credit-service:
   /account:
     /{개체식별번호}:
@@ -32,7 +32,7 @@
       /transfer/{receiver 개체식별번호}:
         [POST]: 송금 { 크레딧 양 }
 
-# 사용자 서비스 user-service
+# 사용자 서비스 user-service  localhost:8083
 /user-service:
   /user:
     [GET]: 사용자 정보 조회 { 토큰 }
@@ -64,7 +64,7 @@
   /auth:
     [POST]: 인증 응답 { 생성자, 인식자 }
 
-# 가게 서비스 store-service
+# 가게 서비스 store-service  localhost:8084
 /store-service:
   /store:
     [POST]: 가게 등록 { 사용자 토큰, 가게이름 }
