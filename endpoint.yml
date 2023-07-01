@@ -66,6 +66,11 @@
   /auth:
     [POST]: 인증 응답 { 생성자, 인식자 }
 
+  /public-key:
+    [GET]: 공개키 요청
+      성공: 200 { 인증 서비스 공개키 }
+      실패: 400 { 에러코드 }
+
 # 가게 서비스 store-service  localhost:8084
 /store-service:
   /store:
