@@ -36,7 +36,7 @@
 
 # 사용자 서비스 user-service  localhost:8083
 /user-service:
-  /user:
+  /api/user:
     [GET]: 사용자 정보 조회 { 토큰 }
       성공: 200 { 아이디, 이름, 이메일, 크레딧 잔액 }
     [PUT]: 사용자 정보 수정 { 토큰 }
@@ -58,25 +58,25 @@
         성공: 200
         실패: 400 {에러코드}
         
-  /login:
+  /api/login:
     [POST]: 로그인 { 아이디, 비밀번호 }
       성공: 301 {사용자 토큰, 리다이렉트 주소}
       실패: 401
 
-  /qr:
+  /internal/qr:
     [GET]: QR 정보 생성 { 사용자 토큰 }
       성공: 200 { 인증서, 암호화된 사용자 개체식별번호 }
       실패: 401, 400 { 에러코드 }
 
-  /credit:
+  /internal/credit:
     [POST]: 크레딧 충전 요청 { 사용자 토큰, 충전 정보 }
       성공: 200
       실패: 401, 400 { 에러코드 }
 
-  /auth:
+  /internal/auth:
     [POST]: 인증 응답 { 생성자, 인식자 }
 
-  /public-key:
+  /internal/public-key:
     [GET]: 공개키 요청
       성공: 200 { 인증 서비스 공개키 }
       실패: 400 { 에러코드 }
