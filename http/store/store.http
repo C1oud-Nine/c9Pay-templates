@@ -1,0 +1,12 @@
+### 가게 조회
+GET {{store-api}}/api/store
+Cookie: Authorization=Bearer+eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYWVkb28iLCJ0eXBlIjoidXNlciIsImlwIjoiMTIzNCIsImV4cCI6MTY5MDg2NjQ5Mn0.PYRIT2jYFj2Qb5Av12VG3LGOkmCO6Zt0CWTi7VRWriCFqkvKQ8TTQA3S8e1NH-4_mKKIDHrRkMeu5FXLjQEzlA
+
+### 가게 등록
+POST {{store-api}}/api/store
+Content-Type: application/json
+Cookie: Authorization=Bearer+eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiJqYWVkb28iLCJ0eXBlIjoidXNlciIsImlwIjoiMTIzNCIsImV4cCI6MTY5MDg2NjQ5Mn0.PYRIT2jYFj2Qb5Av12VG3LGOkmCO6Zt0CWTi7VRWriCFqkvKQ8TTQA3S8e1NH-4_mKKIDHrRkMeu5FXLjQEzlA
+
+{
+  "name": "test4"
+}

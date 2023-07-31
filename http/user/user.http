@@ -1,0 +1,34 @@
+
+### 사용자 정보 업데이트
+PUT {{user-api}}/api/user
+cookie: Authorization=Bearer+eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidHlwZSI6IiV7and0LnNlcnZpY2UtdHlwZX0iLCJleHAiOjE2OTA3Nzk4Mjh9.wypPpQNqI1VPaukHIl1YPiscp7qgNcbM8NSpgTd9wzF1VjjscsogDiLaGFnvP8BGGymXSLS6DaAF3CDpuCL8EA
+
+
+### 회원가입
+POST {{user-api}}/api/user/signup
+Content-Type: application/json
+
+{
+  "userId":"test",
+  "username": "dummy",
+  "password": "test123",
+  "email": "abd@gmail.com"
+}
+
+
+### 사용자 정보
+GET {{user-api}}/api/user
+cookie: Authorization=Bearer+eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidHlwZSI6IiV7and0LnNlcnZpY2UtdHlwZX0iLCJleHAiOjE2OTA3Nzk4Mjh9.wypPpQNqI1VPaukHIl1YPiscp7qgNcbM8NSpgTd9wzF1VjjscsogDiLaGFnvP8BGGymXSLS6DaAF3CDpuCL8EA
+
+### 아이디 중복 확인
+GET {{user-api}}/api/user/check-duplicate
+userId: test2
+
+
+### 사용자 개체 식별번호 조회
+GET {{user-api}}/api/user/serial-number
+cookie: Authorization=Bearer+eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidHlwZSI6IiV7and0LnNlcnZpY2UtdHlwZX0iLCJleHAiOjE2OTA3Nzk4Mjh9.wypPpQNqI1VPaukHIl1YPiscp7qgNcbM8NSpgTd9wzF1VjjscsogDiLaGFnvP8BGGymXSLS6DaAF3CDpuCL8EA
+
+### 사용자 탈퇴
+DELETE {{user-api}}/api/user
+cookie: Authorization=Bearer+eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidHlwZSI6IiV7and0LnNlcnZpY2UtdHlwZX0iLCJleHAiOjE2OTA3Nzk4Mjh9.wypPpQNqI1VPaukHIl1YPiscp7qgNcbM8NSpgTd9wzF1VjjscsogDiLaGFnvP8BGGymXSLS6DaAF3CDpuCL8EA

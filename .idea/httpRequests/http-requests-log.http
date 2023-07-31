@@ -1,0 +1,19 @@
+POST http://api.teamcloudnine.link/auth-service/certificate
+Content-Type: application/json
+Content-Length: 112
+Connection: Keep-Alive
+User-Agent: Apache-HttpClient/4.5.14 (Java/17.0.6)
+Accept-Encoding: br,deflate,gzip,x-gzip
+
+{
+  "publicKey": "test",
+  "serviceInfo": {
+    "name": "user-service",
+    "endpoint": "userService/auth"
+  }
+}
+
+<> 2023-07-31T145825.200.json
+
+###
+

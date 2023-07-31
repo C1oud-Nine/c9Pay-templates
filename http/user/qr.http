@@ -1,0 +1,3 @@
+### QR 생성 요청
+GET {{user-api}}/api/qr
+cookie: Authorization=Bearer+eyJhbGciOiJIUzUxMiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxIiwidHlwZSI6IiV7and0LnNlcnZpY2UtdHlwZX0iLCJleHAiOjE2OTA3Nzk4Mjh9.wypPpQNqI1VPaukHIl1YPiscp7qgNcbM8NSpgTd9wzF1VjjscsogDiLaGFnvP8BGGymXSLS6DaAF3CDpuCL8EA
