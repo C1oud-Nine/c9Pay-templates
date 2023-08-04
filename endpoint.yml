@@ -1,3 +1,5 @@
+# Gateway-service localhost:8000
+
 # 인증 서비스 auth-service localhost:8081
 /auth-service:
   /serial-number:
