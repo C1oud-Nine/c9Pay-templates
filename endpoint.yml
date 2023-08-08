@@ -12,7 +12,7 @@
 
   /certificate:
     [POST]: 인증서 생성 { 서비스 공개키, 서비스 정보 }
-      성공: 200 { 인증서 }
+      성공: 200 { certificate(stringType) }
       실패: 400 { 에러코드 }
 
   /public-key:
