@@ -3,23 +3,20 @@
 # 인증 서비스 auth-service localhost:8081
 /auth-service:
   /serial-number:
-    [GET]: 식별번호 검증 { 개체식별번호 }
-      성공: 200
-      실패: 400
     [POST]: 식별번호 생성
       성공: 200 { 개체식별번호 }
       실패: 400 { 에러코드 }
-
-  /certificate:
-    [POST]: 인증서 생성 { 서비스 공개키, 서비스 정보 }
-      성공: 200 { certificate(stringType) }
-      실패: 400 { 에러코드 }
-
-  /public-key:
-    [GET]: 공개키 요청
-      성공: 200 { 인증 서비스 공개키 }
-      실패: 400 { 에러코드 }
-
+    /{개체식별번호}:
+      [GET]: 식별번호 검증 { 개체식별번호 }
+        성공: 200
+        실패: 400
+      /exchange:
+        [GET]: 식별번호 교환 토큰 생성
+          성공: 200 { 교환 토큰(token): String, 만료시간(expiredAt): long }
+          실패: 400 { 에러코드 }
+        [POST]: 식별번호 교환 토큰 제출 { 교환 토큰(token): String }
+          성공: 200 { 개체식별번호(serialNumber): UUID }
+          실패: 400 { 에러코드 }
 
 # 크레딧 서비스 credit-service  localhost:8082
 /credit-service:
