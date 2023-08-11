@@ -12,11 +12,13 @@
         실패: 400
       /exchange:
         [GET]: 식별번호 교환 토큰 생성
-          성공: 200 { 교환 토큰(token): String, 만료시간(expiredAt): long }
+          성공: 200 { 교환 토큰(token): String, 만료시간(expiredAt): long, 서명(sign): String }
           실패: 400 { 에러코드 }
-        [POST]: 식별번호 교환 토큰 제출 { 교환 토큰(token): String }
-          성공: 200 { 개체식별번호(serialNumber): UUID }
-          실패: 400 { 에러코드 }
+
+  /public-key:
+    [GET]: 공개키 획득
+      성공: 200 { 공개키(publicKey): String }
+      실패: 400
 
 # 크레딧 서비스 credit-service  localhost:8082
 /credit-service:
