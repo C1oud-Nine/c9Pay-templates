@@ -7,7 +7,7 @@ HttpStatus: {표의 상태 코드}
 Body:
 
 {
-  errorCode: {표의 에러 코드}
+  "errorCode": "{표의 에러 코드}"
 }
 ```
 ### 표
